@@ -39,28 +39,27 @@
         android:id="@+id/witherText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:text="Clear sky"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UpdatedText" />
+        app:layout_constraintTop_toBottomOf="@+id/Temperature" />
 
     <TextView
         android:id="@+id/Temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-thin"
         android:text="17°C"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="110dp"
+        android:textSize="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/witherText" />
+        app:layout_constraintTop_toBottomOf="@+id/UpdatedText" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -71,7 +70,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Temperature">
+        app:layout_constraintTop_toBottomOf="@+id/witherText">
 
         <TextView
             android:id="@+id/LowTemperature"
@@ -103,6 +102,7 @@
         android:layout_marginEnd="24dp"
         android:orientation="horizontal"
         android:weightSum="3"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -260,18 +260,17 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         android:orientation="horizontal"
         android:weightSum="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -378,12 +377,14 @@
         </Space>
 
         <LinearLayout
+            android:id="@+id/refresh_LL"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape"
             android:gravity="center"
             android:orientation="vertical"
+            android:clickable="true"
             android:padding="8dp">
 
             <ImageView
@@ -423,4 +424,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
