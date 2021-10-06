@@ -177,20 +177,4 @@ class MainActivity : AppCompatActivity() {
         alert.setView(input)
         alert.show()
     }
-    private fun Alert(){
-        val dialogBuilder = AlertDialog.Builder(this)
-        dialogBuilder.setMessage("Entering valid zip code:")
-            .setPositiveButton("OK", DialogInterface.OnClickListener {
-                    dialog, id ->
-                customAlert()
-                    dialog.cancel()
-
-
-            })
-
-
-        // create dialog box
-        val alert = dialogBuilder.create()
-        alert.show()
-    }
 }
